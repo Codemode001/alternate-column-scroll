@@ -2,7 +2,7 @@ import { calcWinsize, adjustedBoundingRect } from "./utils";
 import LocomotiveScroll from "https://cdn.skypack.dev/locomotive-scroll@4.1.3";
 import { GridItem } from "./gridItem";
 import { ContentItem } from "./contentItem";
-import { gsap } from "gsap/all";
+import { gsap } from "gsap";
 
 // body element
 const bodyEl = document.body;
