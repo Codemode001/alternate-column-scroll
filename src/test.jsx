@@ -646,7 +646,6 @@ export default function Test() {
             </button>
           </div>
         </main>
-        <script type="module" src="./js/index.js"></script>
       </body>
     </div>
   );
