@@ -6,10 +6,13 @@
 
 :root {
 	font-size: 13px;
-}
 
+}
 body {
 	margin: 0;
+}
+
+.page1 {
 	--color-text: #000;
 	--color-bg: #b7b19f;
 	--color-link: #000;
@@ -659,3 +662,4 @@ html.has-scroll-dragging {
 	right: auto;
 	bottom: 0;
 }
+

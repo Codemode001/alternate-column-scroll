@@ -1,0 +1,417 @@
+
+.page2 {
+	font-size: 17px;
+  margin: 0;
+  --color-text: #fff;
+  --color-text-menu: #000;
+  --color-text-frame: #817f7f;
+
+  --color-bg-menu: #ee8233;
+  --color-link: #fff;
+  --color-link-hover: #fff;
+  --color-link-menu: #000;
+  --color-link-social: #ca5d2b;
+  --border-radius: 2rem;
+  --menu-padding: 1rem;
+  --color-text-title: #ee8233;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family: acumin-pro, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Page Loader */
+.js .loading::before,
+.js .loading::after {
+  content: "";
+  position: fixed;
+  z-index: 1000;
+}
+
+.js .loading::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+}
+
+.js .loading::after {
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  border-radius: 50%;
+  opacity: 0.4;
+  background: var(--color-link);
+  animation: loaderAnim 0.7s linear infinite alternate forwards;
+}
+
+@keyframes loaderAnim {
+  to {
+    opacity: 1;
+    transform: scale3d(0.5, 0.5, 1);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+  outline: none;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  outline: none;
+}
+
+/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:focus {
+  /* Provide a fallback style for browsers
+	 that don't support :focus-visible */
+  outline: none;
+  background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+	 that do support :focus-visible */
+  background: transparent;
+}
+
+a:focus-visible {
+  /* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+  outline: 2px solid red;
+  background: transparent;
+  outline-offset: -2px;
+}
+
+.hover-line {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.hover-line::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  position: absolute;
+  top: 92%;
+  transition: transform 0.3s;
+  transform-origin: 0% 50%;
+}
+
+.hover-line:hover::before {
+  transform: scaleX(0);
+  transform-origin: 100% 50%;
+}
+
+.unbuttons {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.unbuttons:focus {
+  outline: none;
+}
+
+.mains {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.cover-wrap {
+  display: grid;
+  pointer-events: none;
+  grid-area: 1 / 1 / 2 / 2;
+  z-index: 100;
+}
+
+.cover {
+  display: grid;
+  grid-area: 1 / 1 / 2 / 2;
+  transform: translateY(-100%);
+  overflow: hidden;
+}
+
+.cover__inner {
+  background-size: cover;
+  transform: translateY(100%);
+  background-position: 50% 50%;
+}
+
+.cover-wrap,
+.cover,
+.cover__inner {
+  will-change: transform;
+}
+
+.menu {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 100;
+  color: var(--color-text-menu);
+  display: grid;
+  grid-template-rows: 3rem 1fr;
+  grid-template-areas: "top" "content";
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.menu--open {
+  pointer-events: auto;
+}
+
+.menu__top {
+  pointer-events: auto;
+  z-index: 100;
+  padding: 0 var(--menu-padding);
+  grid-area: top;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "title nav search";
+  justify-content: space-between;
+  background: var(--color-bg-menu);
+  border-radius: var(--border-radius);
+}
+
+.menu__content-wrap {
+  position: relative;
+  grid-area: content;
+  overflow: hidden;
+  margin-top: -1.35rem;
+}
+
+.menu__content {
+  overflow: hidden;
+  transform: translateY(-100%);
+  padding: 0 var(--menu-padding);
+  height: 100%;
+  display: grid;
+  justify-content: space-between;
+  background: var(--color-bg-menu);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  grid-template-rows: 1fr auto;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "links links back"
+    "tagline tagline tagline";
+  padding-bottom: 1rem;
+  will-change: transform;
+}
+
+.menu__back {
+  position: relative;
+  grid-area: back;
+  height: 90px;
+  align-self: start;
+  margin-top: calc(5.5vh + 2rem);
+}
+
+.menu__back svg {
+  display: block;
+  fill: #000;
+  height: 100%;
+  max-height: 201px;
+  transition: transform 0.3s;
+}
+
+.menu__back:hover svg,
+.menu__back:focus svg {
+  transform: translateY(-10px);
+}
+
+.menu__title {
+  grid-area: title;
+  font-family: kudryashev-d-excontrast-sans, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  align-self: center;
+  justify-self: start;
+  text-transform: uppercase;
+  font-size: 1.65rem;
+  position: relative;
+  line-height: 0.5;
+  margin-top: 0.15rem;
+}
+
+.menu__tagline {
+  grid-area: tagline;
+  font-size: 6vw;
+  font-family: kudryashev-d-excontrast-sans, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  align-self: end;
+  line-height: 0.8;
+  position: relative;
+  will-change: transform;
+}
+
+.menu__nav-top {
+  grid-area: nav;
+  overflow: hidden;
+  height: 1.75rem;
+  justify-self: center;
+}
+
+.menu__nav-top a {
+  margin: 0 1rem;
+}
+
+.menu__nav-content {
+  grid-area: links;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: start;
+  margin-top: 5.5vh;
+}
+
+.column1 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  min-width: 15ch;
+  align-items: flex-start;
+}
+
+.column__title {
+  margin: 1.5rem 0 0.5rem;
+}
+
+.menu__side {
+  grid-area: search;
+  align-self: center;
+  justify-self: end;
+  position: relative;
+}
+
+.menu__social {
+  display: none;
+  position: relative;
+  grid-area: social;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.menu__social-link {
+  color: var(--color-link-social);
+}
+
+.menu__social-link:hover,
+.menu__social-link:focus {
+  color: var(--color-link-menu);
+}
+
+.menu__social-author {
+  margin-top: 2rem;
+  font-family: kudryashev-d-excontrast-sans, sans-serif;
+  font-weight: 300;
+  font-size: 2.5vw;
+  color: var(--color-link-menu);
+  will-change: transform;
+}
+
+.menu__social-author:hover,
+.menu__social-author:focus {
+  color: var(--color-link-social);
+}
+
+.search {
+  white-space: nowrap;
+}
+
+.search svg {
+  width: 13px;
+  margin-left: 1rem;
+}
+
+.line-link {
+  color: var(--color-link-menu);
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.line-link:hover,
+.line-link:focus {
+  color: var(--color-link-menu);
+}
+
+.line-link::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  position: absolute;
+  top: 92%;
+  transition: transform 0.3s;
+  transform-origin: 0% 50%;
+  transform: scaleX(0);
+}
+
+.line-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: 100% 50%;
+}
+
+@media screen and (min-width: 55.5em) {
+  body {
+    --menu-padding: 2rem;
+  }
+  .frame {
+    display: flex;
+  }
+  .frame__links {
+    margin: 0 0 0 2rem;
+  }
+  .menu {
+    top: 2rem;
+    left: 3rem;
+    right: 3rem;
+    bottom: 2rem;
+  }
+  .menu__top {
+    grid-template-columns: 5rem 10% minmax(200px, 417px) 10% 5rem;
+    grid-template-areas: "title ... nav ... search";
+  }
+  .menu__content {
+    grid-template-rows: 1fr 10vh;
+    grid-template-columns: 5rem 10% minmax(200px, 417px) 10% 5rem;
+    grid-template-areas:
+      "... ... links back ..."
+      "tagline tagline social social social";
+  }
+  .menu__tagline {
+    font-size: 17.5vw;
+    font-size: clamp(1.5rem, 17.5vh, 8rem);
+  }
+  .menu__back {
+    height: 200px;
+    margin-top: calc(5.5vh + 1.5rem);
+  }
+  .menu__social {
+    display: flex;
+  }
+}
