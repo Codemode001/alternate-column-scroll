@@ -61,7 +61,7 @@ export class Grid {
 
     // first and third columns
     this.DOM.oddColumns = [...this.DOM.el.querySelectorAll(".column")].filter(
-      (_, index) => index != 1
+      (_, index) => index !== 1
     );
     // grid items (figure.column__item)
     this.DOM.gridItems = [...this.DOM.el.querySelectorAll(".column__item")];
@@ -244,11 +244,11 @@ export class Grid {
   showContent(gridItem) {
     // All the other (that are inside the viewport)
     this.viewportGridItems = this.gridItemArr.filter(
-      (el) => el != gridItem && el.DOM.el.classList.contains("in-view")
+      (el) => el !== gridItem && el.DOM.el.classList.contains("in-view")
     );
     // Remaining (not in the viewport)
     this.remainingGridItems = this.gridItemArr
-      .filter((el) => !this.viewportGridItems.includes(el) && el != gridItem)
+      .filter((el) => !this.viewportGridItems.includes(el) && el !== gridItem)
       .map((gridItem) => gridItem.DOM.el);
 
     // image outer elements
