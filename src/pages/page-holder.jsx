@@ -6,27 +6,27 @@ import { ButtonCtrl } from "./magneticbuttonsjs/demo1/buttonCtrl";
 import Test from "./column-scroll";
 import Design1 from "./diffdesigns/design1";
 
-setTimeout(() => document.body.classList.add("render"), 60);
-const navdemos = Array.from(document.querySelectorAll("nav.demos > .demo"));
-const navigate = (linkEl) => {
-  document.body.classList.remove("render");
-  document.body.addEventListener(
-    "transitionend",
-    () => (window.location = linkEl.href)
-  );
-};
-navdemos.forEach((link) =>
-  link.addEventListener("click", (ev) => {
-    ev.preventDefault();
-    navigate(ev.target);
-  })
-);
+// setTimeout(() => document.body.classList.add("render"), 60);
+// const navdemos = Array.from(document.querySelectorAll("nav.demos > .demo"));
+// const navigate = (linkEl) => {
+//   document.body.classList.remove("render");
+//   document.body.addEventListener(
+//     "transitionend",
+//     () => (window.location = linkEl.href)
+//   );
+// };
+// navdemos.forEach((link) =>
+//   link.addEventListener("click", (ev) => {
+//     ev.preventDefault();
+//     navigate(ev.target);
+//   })
+// );
 
-const cursor = new Cursor(document.querySelector(".cursor"));
-const button = new ButtonCtrl(document.querySelector(".button"));
+// const cursor = new Cursor(document.querySelector(".cursor"));
+// const button = new ButtonCtrl(document.querySelector(".button"));
 
-button.on("enter", () => cursor.enter());
-button.on("leave", () => cursor.leave());
+// button.on("enter", () => cursor.enter());
+// button.on("leave", () => cursor.leave());
 
 export default function PageHolder() {
   const handleClick = (event) => {
