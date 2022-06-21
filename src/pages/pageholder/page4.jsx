@@ -17,7 +17,6 @@ export default function Page4() {
         </div>
         <div
           style={{
-            height: "20rem",
             marginLeft: "0",
             position: "absolute",
             width: "100%",

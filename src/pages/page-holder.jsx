@@ -66,7 +66,6 @@ export default function PageHolder() {
         </header> */}
         <div
           style={{
-            height: "20rem",
             marginLeft: "0",
             position: "absolute",
             width: "100%",
