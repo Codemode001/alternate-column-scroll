@@ -16,9 +16,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Test />} />
+      <Route path="/test" element={<Test />} />
       <Route path="/menu" element={<Menu />} />
-      <Route path="/page" element={<PageHolder />} />
+      <Route path="/" element={<PageHolder />} />
       <Route path="/page2" element={<Page2 />} />
       <Route path="/page3" element={<Page3 />} />
       <Route path="/page4" element={<Page4 />} />
