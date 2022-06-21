@@ -1,6 +1,10 @@
 import { gsap } from "gsap";
 import React from "react";
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 export default function MyMenu() {
   const DOM = {
     // For demo purposes, trigger the effect when clicking any link in the menu (.line-link)
@@ -17,13 +21,12 @@ export default function MyMenu() {
       imgs: [...document.querySelectorAll(".content > .content__img")],
       titles: [...document.querySelectorAll(".content > .content__title")],
     },
-    // Menu element (.menu)
     menu: document.querySelector(".menu"),
-    // Element that slides out
+
     menuContent: document.querySelector(".menu__content"),
-    // Close button
+
     closeCtrl: document.querySelector(".menu__back"),
-    // Extra elements that will be animated inside the menu
+
     extra: document.querySelectorAll(".menu__tagline, .menu__social-author"),
   };
 
@@ -137,7 +140,6 @@ export default function MyMenu() {
     menuTimeline.reverse(0);
   };
 
-  // Expand the menu when pressing any of the menu top links...
   DOM.menuLinks.forEach((link) => {
     link.addEventListener("click", (ev) => {
       ev.preventDefault();
@@ -145,10 +147,10 @@ export default function MyMenu() {
     });
   });
 
-  // Collapse it when pressing the close button
   DOM.closeCtrl.addEventListener("click", (ev) => {
     ev.preventDefault();
     collapseMenu();
   });
+
   return;
 }

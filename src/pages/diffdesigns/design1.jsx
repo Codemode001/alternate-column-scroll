@@ -1,13 +1,12 @@
-import React, { useEffect } from "react";
-import "../css/scroll/scroll.css";
-import Scroll from "../scrolljs";
-import Menu from "./menu";
+import React from "react";
+import Scroll from "../../scrolljs";
+import Menu from "../menu";
+import "../../css/scroll/design1.css";
 
-export default function Test() {
+export default function Design1() {
   Scroll();
-
   return (
-    <body className="page1">
+    <body className="page1-2">
       <main>
         <div id="menu">
           {" "}

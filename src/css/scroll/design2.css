@@ -1,5 +1,4 @@
 
-
 :root {
 	font-size: 13px;
 
@@ -9,14 +8,13 @@ body {
 	margin: 0;
 }
 
-.page1 {
+.page1-3 {
 	--color-text: #000;
-	background-color: #b7b19f;
 	--color-link: #000;
+    background-color: #d6ccc1;
 	--color-link-hover: #000;
 	--color-heading: #111;
 	color: var(--color-text);
-	background-color: var(--color-bg);
 	font-family: nimbus-sans, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

@@ -5,7 +5,6 @@
   --color-text: #fff;
   --color-text-menu: #000;
   --color-text-frame: #817f7f;
-
   --color-bg-menu: #ee8233;
   --color-link: #fff;
   --color-link-hover: #fff;
@@ -15,7 +14,6 @@
   --menu-padding: 1rem;
   --color-text-title: #ee8233;
   color: var(--color-text);
-  background-color: var(--color-bg);
   font-family: acumin-pro, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
