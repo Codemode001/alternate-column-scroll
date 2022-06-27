@@ -1,0 +1,65 @@
+.button6-body {
+	--button-border-radius: 7px;
+    --button-bg: transparent;
+    --button-stroke: #1c386f;
+    --button-stroke-width: 2px;
+    --button-text: #1c386f;
+    --button-stroke-hover: #1c386f;
+    --button-stroke-width-hover: 2px;
+    --button-text-hover: #1c386f;
+    --cursor-stroke: #1c386f;
+    --cursor-fill: #1c386f;
+    --cursor-stroke-width: 1px;
+    --color-link: #1c386f;
+}
+
+.button6-wrap {
+	position: relative;
+	perspective: 1000px;
+}
+
+.button6 {
+	cursor: pointer;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border-width: var(--button-stroke-width);
+	border-color: var(--button-stroke);
+	border-style: solid;
+	color: var(--button-text);
+	border-radius: var(--button-border-radius);
+	min-width: 18rem;
+	height: 9rem;
+	padding: 0;
+	margin: 1rem;
+	font-family: inherit;
+	font-size: 1.5rem;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button6:focus,
+.button6--hover {
+	outline: none;
+	border-width: var(--button-stroke-width-hover);
+	border-color: var(--button-stroke-hover);
+	color: var(--button-text-hover);
+}
+
+.button6__deco {
+	position: absolute;
+	width: 150%;
+	height: 200%;
+	top: -50%;
+	left: -25%;
+	transform: translate3d(0,75%,0);
+}
+
+.button6__text, 
+.button6__text-inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    margin-bottom: 6rem;
+}

@@ -25,7 +25,7 @@ export default function MyMenu() {
 
     menuContent: document.querySelector(".menu__content"),
 
-    closeCtrl: document.querySelector(".menu__back"),
+    closeCtrl: document.querySelector(".menu__back unbuttons"),
 
     extra: document.querySelectorAll(".menu__tagline, .menu__social-author"),
   };
@@ -147,10 +147,11 @@ export default function MyMenu() {
     });
   });
 
+  console.log(DOM.closeCtrl);
+
   DOM.closeCtrl.addEventListener("click", (ev) => {
     ev.preventDefault();
     collapseMenu();
   });
-
   return;
 }

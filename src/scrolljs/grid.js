@@ -3,7 +3,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import { GridItem } from "./gridItem";
 import { ContentItem } from "./contentItem";
 import { gsap } from "gsap";
-
+import Button1 from "../buttons/button1";
 // body element
 const bodyEl = document.body;
 
@@ -309,6 +309,7 @@ export class Grid {
         },
         "start+=0.05"
       )
+      //responsible for moving images in the front
       .to(
         gridItem.DOM.img.outer,
         {
@@ -320,10 +321,13 @@ export class Grid {
         },
         "start"
       )
+      //responsible for making imgs smaller when clicked
       .to(
         gridItem.DOM.img.inner,
         {
           scale: 1,
+          position: "relative",
+          zIndex: 1,
           onComplete: () =>
             gsap.set(gridItem.DOM.img.inner, { willChange: "" }),
         },
@@ -353,6 +357,7 @@ export class Grid {
           },
           "start"
         )
+        //responsible for making the other immages dissapear when clicked
         .to(
           viewportGridItem.DOM.img.outer,
           {
@@ -368,6 +373,7 @@ export class Grid {
 
     this.timeline
       .addLabel("showContent", "start+=0.2")
+      //responsible for showing the extra images at the bottom
       .to(
         [...this.DOM.contentNavItems].slice(this.viewportGridItems.length + 1),
         {
@@ -377,6 +383,7 @@ export class Grid {
         },
         "showContent"
       )
+      //responsible for showing the content
       .add(() => {
         gridItem.contentItem.DOM.el.classList.add("content__item--current");
         bodyEl.classList.add("view-content");
@@ -385,6 +392,7 @@ export class Grid {
         [this.DOM.backCtrl, this.DOM.contentNav, gridItem.contentItem.DOM.text],
         {
           opacity: 1,
+          zIndex: 10,
         },
         "showContent"
       )
@@ -392,6 +400,8 @@ export class Grid {
         gridItem.contentItem.DOM.title,
         {
           opacity: 1,
+          position: "absolute",
+          zIndex: 5,
           startAt: {
             y: "-100%",
             scaleY: 3,

@@ -1,10 +1,23 @@
-import React, { useEffect } from "react";
 import "../css/scroll/scroll.css";
 import Scroll from "../scrolljs";
 import Menu from "./menu";
+import Button1 from "../buttons/button1";
+import { Button } from "@mui/material";
+import { useState } from "react";
 
 export default function Test() {
   Scroll();
+  //function to add buttons
+  // const [btn, setbtn] = useState(" ");
+  // const changebtn = () => {
+  //   setbtn(<Button1 />);
+  // };
+
+  // const changebutton = () => {
+  //   setbtn(" ");
+  // };
+
+  //scroll function
 
   return (
     <body className="page1">
@@ -17,10 +30,16 @@ export default function Test() {
           <div className="column-wrap column-wrap--height">
             <div className="column">
               <figure className="column__item">
-                <div className="column__item-imgwrap" data-pos="2">
+                <div
+                  className="column__item-imgwrap"
+                  data-pos="2"
+                  style={{ position: "relative", zIndex: "1" }}
+                >
                   <div
                     className="column__item-img"
-                    style={{ backgroundImage: "url(/img/1.jpg)" }}
+                    style={{
+                      backgroundImage: "url(/img/1.jpg)",
+                    }}
                   ></div>
                 </div>
                 <figcaption className="column__item-caption">
@@ -117,10 +136,16 @@ export default function Test() {
           <div className="column-wrap">
             <div className="column" data-scroll-section>
               <figure className="column__item">
-                <div className="column__item-imgwrap" data-pos="1">
+                <div
+                  className="column__item-imgwrap"
+                  data-pos="1"
+                  styl={{ position: "relative", zIndex: 1 }}
+                >
                   <div
                     className="column__item-img"
-                    style={{ backgroundImage: "url(img/9.jpg)" }}
+                    style={{
+                      backgroundImage: "url(img/9.jpg)",
+                    }}
                   ></div>
                 </div>
                 <figcaption className="column__item-caption">
@@ -317,8 +342,11 @@ export default function Test() {
         </div>
         <div className="content">
           <div className="content__item">
-            <h2 className="content__item-title">Lucky Wood</h2>
+            <div>
+              <h2 className="content__item-title">Lucky Wood</h2>
+            </div>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 Faith, you're driving me away You do it every day You don't mean
                 it But it hurts like hell
@@ -329,6 +357,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Cyber Blue</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 My brain says I'm receiving pain A lack of oxygen From my life
                 support My iron lung
@@ -339,6 +368,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Bold Human</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 We're too young to fall asleep Too cynical to speak We are
                 losing it Can't you tell?
@@ -349,6 +379,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Good Earth</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 We scratch our eternal itch A twentieth century bitch And we are
                 grateful for Our iron lung
@@ -359,6 +390,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Gnostic Will</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 The head shrinkers They want everything My Uncle Bill My Belisha
                 beacon
@@ -369,6 +401,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Loyal Royal</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 The head shrinkers They want everything My Uncle Bill My Belisha
                 beacon
@@ -379,6 +412,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Empty Words</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 Suck, suck your teenage thumb Toilet trained and dumb When the
                 power runs out We'll just hum
@@ -389,6 +423,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">French Kiss</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 This, this is our new song Just like the last one A total waste
                 of time My iron lung
@@ -399,6 +434,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Lone Cone</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 And if you're frightened You can be frightened You can be, it's
                 OK
@@ -409,6 +445,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Nonage Line</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 Lost in the mountain Rust in my brain The air is sacred here In
                 spite of your claim
@@ -419,6 +456,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Half Life</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 Up on the rooftops Out of reach Trickster is meaningless
                 Trickster is weak
@@ -429,6 +467,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Dutch Green</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>He's talking out the world Talking out the world</span>
               <span>2017</span>
             </div>
@@ -436,6 +475,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Blue Hell</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 Hey, hey, hey This is only halfway Hey, hey, hey This is only
                 halfway
@@ -446,6 +486,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Love Boat</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 I wanted you so bad That I couldn't say All these things fall
                 apart
@@ -456,6 +497,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Valley Hill</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 We wanted out so bad We couldn't say These things fall apart
               </span>
@@ -465,6 +507,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Cold Blood</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 Truant kids A can of brick dust worms Who do not want to climb
                 down from Their chestnut tree
@@ -475,6 +518,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Golden Ray</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 Long white gloves Police tread carefully Escaped from the zoo
                 The perfect child facsimile is
@@ -485,6 +529,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Kale Hale</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 Please could you stop the noise? I'm trying to get some rest
                 From all the unborn chicken voices in my head
@@ -495,6 +540,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Tulip Heat</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>What's that? I may be paranoid, but not an android</span>
               <span>2012</span>
             </div>
@@ -502,6 +548,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Blame Game</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 When I am king you will be first against the wall With your
                 opinion which is of no consequence at all
@@ -512,6 +559,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Fake Cake</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 Ambition makes you look pretty ugly Kicking and squealing, Gucci
                 little piggy
@@ -522,6 +570,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Red Wrath</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 You don't remember, you don't remember Why don't you remember my
                 name?
@@ -532,6 +581,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Lone Dust</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 Off with his head, man, off with his head, man Why don't you
                 remember my name? I guess he does
@@ -542,6 +592,7 @@ export default function Test() {
           <div className="content__item">
             <h2 className="content__item-title">Book Belly</h2>
             <div className="content__item-text">
+              <Button1 />
               <span>
                 Rain down, rain down Come on, rain down on me From a great
                 height From a great height, height

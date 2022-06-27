@@ -2,6 +2,7 @@ import React from "react";
 import Scroll from "../../scrolljs";
 import Menu from "../menu";
 import "../../css/scroll/design5.css";
+import Button6 from "../../buttons/button6";
 
 export default function Design5() {
   Scroll();
@@ -318,6 +319,9 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Lucky Wood</h2>
             <div className="content__item-text">
+              <div className="to-separate">
+                <Button6 />
+              </div>
               <span>
                 Faith, you're driving me away You do it every day You don't mean
                 it But it hurts like hell
@@ -328,6 +332,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Cyber Blue</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 My brain says I'm receiving pain A lack of oxygen From my life
                 support My iron lung
@@ -338,6 +343,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Bold Human</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 We're too young to fall asleep Too cynical to speak We are
                 losing it Can't you tell?
@@ -348,6 +354,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Good Earth</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 We scratch our eternal itch A twentieth century bitch And we are
                 grateful for Our iron lung
@@ -358,6 +365,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Gnostic Will</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 The head shrinkers They want everything My Uncle Bill My Belisha
                 beacon
@@ -368,6 +376,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Loyal Royal</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 The head shrinkers They want everything My Uncle Bill My Belisha
                 beacon
@@ -378,6 +387,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Empty Words</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 Suck, suck your teenage thumb Toilet trained and dumb When the
                 power runs out We'll just hum
@@ -388,6 +398,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">French Kiss</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 This, this is our new song Just like the last one A total waste
                 of time My iron lung
@@ -398,6 +409,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Lone Cone</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 And if you're frightened You can be frightened You can be, it's
                 OK
@@ -408,6 +420,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Nonage Line</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 Lost in the mountain Rust in my brain The air is sacred here In
                 spite of your claim
@@ -418,6 +431,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Half Life</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 Up on the rooftops Out of reach Trickster is meaningless
                 Trickster is weak
@@ -428,6 +442,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Dutch Green</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>He's talking out the world Talking out the world</span>
               <span>2017</span>
             </div>
@@ -435,6 +450,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Blue Hell</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 Hey, hey, hey This is only halfway Hey, hey, hey This is only
                 halfway
@@ -445,6 +461,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Love Boat</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 I wanted you so bad That I couldn't say All these things fall
                 apart
@@ -455,6 +472,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Valley Hill</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 We wanted out so bad We couldn't say These things fall apart
               </span>
@@ -464,6 +482,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Cold Blood</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 Truant kids A can of brick dust worms Who do not want to climb
                 down from Their chestnut tree
@@ -474,6 +493,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Golden Ray</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 Long white gloves Police tread carefully Escaped from the zoo
                 The perfect child facsimile is
@@ -484,6 +504,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Kale Hale</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 Please could you stop the noise? I'm trying to get some rest
                 From all the unborn chicken voices in my head
@@ -494,6 +515,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Tulip Heat</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>What's that? I may be paranoid, but not an android</span>
               <span>2012</span>
             </div>
@@ -501,6 +523,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Blame Game</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 When I am king you will be first against the wall With your
                 opinion which is of no consequence at all
@@ -511,6 +534,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Fake Cake</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 Ambition makes you look pretty ugly Kicking and squealing, Gucci
                 little piggy
@@ -521,6 +545,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Red Wrath</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 You don't remember, you don't remember Why don't you remember my
                 name?
@@ -531,6 +556,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Lone Dust</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 Off with his head, man, off with his head, man Why don't you
                 remember my name? I guess he does
@@ -541,6 +567,7 @@ export default function Design5() {
           <div className="content__item">
             <h2 className="content__item-title">Book Belly</h2>
             <div className="content__item-text">
+              <Button6 />
               <span>
                 Rain down, rain down Come on, rain down on me From a great
                 height From a great height, height

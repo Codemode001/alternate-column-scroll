@@ -25,7 +25,7 @@ export default function Page3() {
           <Design2 />
         </div>
         <nav className="demos">
-          <a href="page" className="demo" aria-label="Demo 1"></a>
+          <a href="/" className="demo" aria-label="Demo 1"></a>
           <a href="page2" className="demo" aria-label="Demo 2"></a>
           <a
             href="page3"

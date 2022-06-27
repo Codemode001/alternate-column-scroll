@@ -1,0 +1,69 @@
+.button4-body {
+	--button-border-radius: 40px;
+	--button-bg: transparent;
+	--button-stroke: #000;
+	--button-stroke-width: 1px;
+	--button-text: #000;
+	--button-bg-hover: #d8d4cf;
+
+	--button-stroke-width-hover: 1px;
+	--button-text-hover: #fff;
+	--cursor-stroke: #fff;
+    --cursor-fill: #fff;
+    --cursor-stroke-width: 1px;
+	--color-bg: #ccc;
+    margin-right: 15rem;
+    margin-bottom: 2rem;
+    margin-left: 0%;
+}
+
+.button4 {
+	cursor: pointer;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border-width: var(--button-stroke-width);
+	border-color: var(--button-stroke);
+	border-style: solid;
+	color: var(--button-text);
+	background: var(--button-bg);
+	border-radius: var(--button-border-radius);
+	min-width: 14rem;
+	height: 6rem;
+	padding: 0;
+	margin: 1rem;
+	font-family: inherit;
+	font-size: 1.5rem;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button4:focus,
+.button4--hover {
+	outline: none;
+	border-width: var(--button-stroke-width-hover);
+	border-color: var(--button-stroke-hover);
+	color: var(--button-text-hover);
+}
+
+.button4__filler {
+	background: var(--button-filler);
+	position: absolute;
+	width: 150%;
+	height: 200%;
+	border-radius: 50%;
+	top: -50%;
+	left: -25%;
+	transform: translate3d(0,75%,0);
+}
+
+.button4__text, 
+.button4__text-inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+    margin-bottom: 9rem;
+}

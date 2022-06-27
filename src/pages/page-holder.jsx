@@ -1,10 +1,12 @@
 import React from "react";
 import "../css/page/base.css";
 import "../css/page/demo1/button.css";
-import { Cursor } from "./magneticbuttonsjs/cursor";
-import { ButtonCtrl } from "./magneticbuttonsjs/demo1/buttonCtrl";
 import Test from "./column-scroll";
 import Design1 from "./diffdesigns/design1";
+import { Cursor } from "./magneticbuttonsjs/cursor";
+import { ButtonCtrl } from "./magneticbuttonsjs/demo1/buttonCtrl";
+
+// const cursor = new Cursor(document.querySelector(".cursor"));
 
 // setTimeout(() => document.body.classList.add("render"), 60);
 // const navdemos = Array.from(document.querySelectorAll("nav.demos > .demo"));
@@ -21,12 +23,6 @@ import Design1 from "./diffdesigns/design1";
 //     navigate(ev.target);
 //   })
 // );
-
-// const cursor = new Cursor(document.querySelector(".cursor"));
-// const button = new ButtonCtrl(document.querySelector(".button"));
-
-// button.on("enter", () => cursor.enter());
-// button.on("leave", () => cursor.leave());
 
 export default function PageHolder() {
   const handleClick = (event) => {
@@ -82,7 +78,7 @@ export default function PageHolder() {
           </button>
         </div> */}
         <nav className="demos">
-          <a href="page" className="demo demo--current" aria-label="Demo 1"></a>
+          <a href="/" className="demo demo--current" aria-label="Demo 1"></a>
           <a
             href="page2"
             className="demo"
@@ -98,7 +94,6 @@ export default function PageHolder() {
       <svg className="cursor" width="25" height="25" viewBox="0 0 25 25">
         <circle className="cursor__inner" cx="12.5" cy="12.5" r="6.25" />
       </svg>
-      {}
     </body>
   );
 }

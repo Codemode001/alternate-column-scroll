@@ -16,7 +16,6 @@ body {
 	--color-link-hover: #000;
 	--color-heading: #111;
 	color: var(--color-text);
-	background-color: var(--color-bg);
 	font-family: nimbus-sans, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

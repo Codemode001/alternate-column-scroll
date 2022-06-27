@@ -7,15 +7,6 @@ export default function Page5() {
   return (
     <body className="demo-5">
       <main className="main">
-        {/* <div className="contents">
-          <button className="button5">
-            <div className="button5__deco button__deco--2"></div>
-            <div className="button5__deco button__deco--1"></div>
-            <span className="button5__text">
-              <span className="button5__text-inner">start</span>
-            </span>
-          </button>
-        </div> */}
         <div
           style={{
             marginLeft: "0",
@@ -27,7 +18,7 @@ export default function Page5() {
           <Design4 />
         </div>
         <nav className="demos">
-          <a href="page" className="demo" aria-label="Demo 1"></a>
+          <a href="/" className="demo" aria-label="Demo 1"></a>
           <a href="page2" className="demo" aria-label="Demo 2"></a>
           <a href="page3" className="demo" aria-label="Demo 3"></a>
           <a href="page4" className="demo" aria-label="Demo 4"></a>
