@@ -9,14 +9,14 @@ body {
 	margin: 0;
 }
 
-.page1 {
+.loading {
 	--color-text: #000;
 	background-color: #b7b19f;
 	--color-link: #000;
 	--color-link-hover: #000;
 	--color-heading: #111;
 	color: var(--color-text);
-	font-family: nimbus-sans, sans-serif;
+	font-family: "nimbus-sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	--ratio: 0.75;
@@ -184,7 +184,7 @@ main::after {
 	font-size: 12.25vw;
 	z-index: 1000;
 	pointer-events: none;
-	font-family: meno-banner, serif;
+	font-family: "meno-banner", serif;
 	font-weight: 300;
 	text-transform: uppercase;
 	line-height: 1;
