@@ -40,9 +40,11 @@ export default function Test() {
       </head>
       <body className="loading">
         <main>
-          <div id="menu">
-            {" "}
-            <Menu />
+          <div style={{}}>
+            <div id="menu">
+              {" "}
+              <Menu />
+            </div>
             <div class="frame">
               <h1 class="frame__title">Alternate Column Scroll</h1>
               <nav class="frame__links">
@@ -52,9 +54,7 @@ export default function Test() {
                 <a href="https://tympanus.net/codrops/?p=57959">Article</a>
                 <a href="https://github.com/codrops/ColumnScroll/">GitHub</a>
               </nav>
-              <button class="unbutton button-menu" aria-label="Open the menu">
-                <span></span>
-              </button>
+              <span></span>
             </div>
             <h2 class="heading heading--up">Jack Ruthless</h2>
             <h2 class="heading heading--down">Jack Ruthless</h2>

@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import React from "react";
 
 gsap.config({
-  nullTargetWarn: false,
+  nullTargetWarn: true,
 });
 
 export default function MyMenu() {
