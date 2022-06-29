@@ -7,7 +7,8 @@ import { useState } from "react";
 
 export default function Test() {
   Scroll();
-  //function to add buttons
+
+  // function to add buttons
   // const [btn, setbtn] = useState(" ");
   // const changebtn = () => {
   //   setbtn(<Button1 />);
@@ -16,8 +17,6 @@ export default function Test() {
   // const changebutton = () => {
   //   setbtn(" ");
   // };
-
-  //scroll function
 
   return (
     <html>

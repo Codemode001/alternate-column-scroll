@@ -5,6 +5,30 @@ import "../css/menu/menu.css";
 import { Helmet } from "react-helmet";
 
 export default function Menu() {
+  const DOM = {
+    // For demo purposes, trigger the effect when clicking any link in the menu (.line-link)
+    menuLinks: [...document.querySelectorAll(".line-link")],
+    // Cover element (wrap, outer and image inner elements)
+    cover: {
+      wrap: document.querySelector(".cover-wrap"),
+      outer: document.querySelector(".cover"),
+      inner: document.querySelector(".cover__inner"),
+    },
+    // Some of the main page content elements
+    // We'll animate some of the content elements when expanding the menu
+    content: {
+      imgs: [...document.querySelectorAll(".content > .content__img")],
+      titles: [...document.querySelectorAll(".content > .content__title")],
+    },
+    menu: document.querySelector(".menu"),
+
+    menuContent: document.querySelector(".menu__content"),
+
+    closeCtrl: document.querySelector(".menu__back"),
+
+    extra: document.querySelectorAll(".menu__tagline, .menu__social-author"),
+  };
+
   let menuStatus = {
     isOpen: false,
     isAnimating: false,
@@ -119,10 +143,6 @@ export default function Menu() {
     link.addEventListener("click", (ev) => {
       ev.preventDefault();
       expandMenu();
-    });
-    DOM.closeCtrl.addEventListener("click", (ev) => {
-      ev.preventDefault();
-      collapseMenu();
     });
   });
 
@@ -263,27 +283,3 @@ export default function Menu() {
     </html>
   );
 }
-
-const DOM = {
-  // For demo purposes, trigger the effect when clicking any link in the menu (.line-link)
-  menuLinks: [...document.querySelectorAll(".line-link")],
-  // Cover element (wrap, outer and image inner elements)
-  cover: {
-    wrap: document.querySelector(".cover-wrap"),
-    outer: document.querySelector(".cover"),
-    inner: document.querySelector(".cover__inner"),
-  },
-  // Some of the main page content elements
-  // We'll animate some of the content elements when expanding the menu
-  content: {
-    imgs: [...document.querySelectorAll(".content > .content__img")],
-    titles: [...document.querySelectorAll(".content > .content__title")],
-  },
-  menu: document.querySelector(".menu"),
-
-  menuContent: document.querySelector(".menu__content"),
-
-  closeCtrl: document.querySelector(".menu__back"),
-
-  extra: document.querySelectorAll(".menu__tagline, .menu__social-author"),
-};
