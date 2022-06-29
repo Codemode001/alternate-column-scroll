@@ -8,12 +8,6 @@ export default function Page4() {
     <body className="demo-4">
       <main className="main">
         <div className="contents">
-          <button className="button4">
-            <div className="button4__filler"></div>
-            <span className="button4__text">
-              <span className="button4__text-inner">Watch</span>
-            </span>
-          </button>
         </div>
         <div
           style={{

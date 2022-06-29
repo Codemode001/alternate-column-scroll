@@ -7,13 +7,6 @@ export default function Page3() {
   return (
     <body className="demo-3">
       <main className="main">
-        {/* <div className="contents">
-          <button className="button3">
-            <span className="button3__text">
-              <span className="button3__text-inner">Confirm</span>
-            </span>
-          </button>
-        </div> */}
         <div
           style={{
             marginLeft: "0",

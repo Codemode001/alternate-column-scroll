@@ -165,7 +165,7 @@ a:focus-visible {
   left: 1rem;
   right: 1rem;
   bottom: 1rem;
-  z-index: 100;
+  z-index: 10000;
   color: var(--color-text-menu);
   display: grid;
   grid-template-rows: 3rem 1fr;

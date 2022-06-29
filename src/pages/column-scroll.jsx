@@ -40,25 +40,24 @@ export default function Test() {
       </head>
       <body className="loading">
         <main>
-          <div style={{}}>
-            <div id="menu">
-              {" "}
-              <Menu />
-            </div>
-            <div class="frame">
-              <h1 class="frame__title">Alternate Column Scroll</h1>
-              <nav class="frame__links">
-                <a href="https://tympanus.net/codrops/2021/12/01/grid-zoom-layout/">
-                  Previous demo
-                </a>
-                <a href="https://tympanus.net/codrops/?p=57959">Article</a>
-                <a href="https://github.com/codrops/ColumnScroll/">GitHub</a>
-              </nav>
-              <span></span>
-            </div>
-            <h2 class="heading heading--up">Jack Ruthless</h2>
-            <h2 class="heading heading--down">Jack Ruthless</h2>
+          <div id="menu">
+            {" "}
+            <Menu />
           </div>
+          <div class="frame">
+            <h1 class="frame__title">Alternate Column Scroll</h1>
+            <nav class="frame__links">
+              <a href="https://tympanus.net/codrops/2021/12/01/grid-zoom-layout/">
+                Previous demo
+              </a>
+              <a href="https://tympanus.net/codrops/?p=57959">Article</a>
+              <a href="https://github.com/codrops/ColumnScroll/">GitHub</a>
+            </nav>
+            <span></span>
+          </div>
+          <h2 class="heading heading--up">Jack Ruthless</h2>
+          <h2 class="heading heading--down">Jack Ruthless</h2>
+
           <div className="columns" data-scroll-container>
             <div className="column-wrap column-wrap--height">
               <div className="column">
@@ -379,8 +378,8 @@ export default function Test() {
                 <h2 className="content__item-title">Lucky Wood</h2>
               </div>
               <div className="content__item-text">
-                <Button1 />
                 <span>
+                  <Button1 />
                   Faith, you're driving me away You do it every day You don't
                   mean it But it hurts like hell
                 </span>

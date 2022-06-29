@@ -5,12 +5,128 @@ import "../css/menu/menu.css";
 import { Helmet } from "react-helmet";
 
 export default function Menu() {
-  const el = useRef();
-  const q = gsap.utils.selector(el);
+  let menuStatus = {
+    isOpen: false,
+    isAnimating: false,
+  };
 
-  useEffect(() => {
-    gsap.to(q(".line-link"), { x: 100 });
-  }, []);
+  // Animation gsap timeline
+  const menuTimeline = gsap
+    .timeline({
+      paused: true,
+      onComplete: () => (menuStatus.isAnimating = false),
+      onReverseComplete: () => (menuStatus.isAnimating = false),
+      defaults: {
+        duration: 1.2,
+        ease: "power4.inOut",
+      },
+    })
+    .addLabel("start", 0)
+    .add(() => {
+      // Add pointer events to auto/none
+      DOM.menu.classList[menuStatus.isOpen ? "add" : "remove"]("menu--open");
+    }, "start")
+    .to(
+      DOM.cover.wrap,
+      {
+        duration: 1.6,
+        startAt: { scale: "1.1" },
+        ease: "power3.inOut",
+        scale: 1,
+      },
+      "start"
+    )
+    .to(
+      DOM.cover.outer,
+      {
+        startAt: { y: "-100%" },
+        y: "0%",
+      },
+      "start"
+    )
+    .to(
+      DOM.cover.inner,
+      {
+        startAt: { y: "100%" },
+        y: "0%",
+      },
+      "start"
+    )
+    .to(
+      DOM.content.imgs,
+      {
+        //ease: 'power3.inOut',
+        y: (position) => `${position % 2 === 0 ? -20 : 20}%`,
+      },
+      "start"
+    )
+    .to(
+      DOM.content.titles,
+      {
+        //ease: 'power3.inOut',
+        y: (position) => `${position % 2 === 0 ? 20 : -20}%`,
+      },
+      "start"
+    )
+    .addLabel("menu", 0.5)
+    .to(
+      DOM.menuContent,
+      {
+        duration: 1,
+        startAt: { y: "-100%" },
+        y: "0%",
+      },
+      "menu"
+    )
+    .addLabel("extra", "menu+=0.6")
+    .set(
+      DOM.extra,
+      {
+        y: "400%",
+        opacity: 0,
+      },
+      "start"
+    )
+    .to(
+      DOM.extra,
+      {
+        duration: 0.5,
+        ease: "power4",
+        startAt: { opacity: 1 },
+        opacity: 1,
+        y: "0%",
+      },
+      "extra"
+    );
+
+  // Menu expand
+  const expandMenu = () => {
+    if (menuStatus.isAnimating || menuStatus.isOpen) return;
+    menuStatus.isAnimating = true;
+    menuStatus.isOpen = true;
+    menuTimeline.play();
+  };
+
+  // Menu collapse
+  const collapseMenu = () => {
+    if (menuStatus.isAnimating || !menuStatus.isOpen) return;
+    menuStatus.isAnimating = true;
+    menuStatus.isOpen = false;
+    menuTimeline.reverse(0);
+  };
+
+  DOM.menuLinks.forEach((link) => {
+    link.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      expandMenu();
+    });
+    DOM.closeCtrl.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      collapseMenu();
+    });
+  });
+
+  console.log(DOM.closeCtrl);
 
   return (
     <html>
@@ -24,7 +140,6 @@ export default function Menu() {
         <link rel="shortcut icon" href="favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/lon4huw.css" />
         <link rel="stylesheet" type="text/css" href="css/base.css" />
-        <script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
       </head>
       <body className="demo-1">
         <div className="page2">
@@ -47,7 +162,11 @@ export default function Menu() {
                   <a href="#" className="line-link">
                     Dresses
                   </a>
-                  <a href="#" className="line-link">
+                  <a
+                    href="#"
+                    className="line-link"
+                    onClick={() => console.log("hello")}
+                  >
                     Accessories
                   </a>
                   <a href="#" className="line-link">
@@ -118,7 +237,11 @@ export default function Menu() {
                       </a>
                     </div>
                   </nav>
-                  <button className="menu__back unbuttons">
+                  <button
+                    type="button"
+                    className="menu__back unbuttons"
+                    onClick={() => console.log("hello")}
+                  >
                     <svg
                       width="10"
                       height="182"
@@ -132,11 +255,35 @@ export default function Menu() {
               </div>
             </div>
           </main>
-          <Helmet>
+          {/* <Helmet>
             <script src="../menujs/menus.js" DOMContentLoaded></script>
-          </Helmet>
+          </Helmet> */}
         </div>
       </body>
     </html>
   );
 }
+
+const DOM = {
+  // For demo purposes, trigger the effect when clicking any link in the menu (.line-link)
+  menuLinks: [...document.querySelectorAll(".line-link")],
+  // Cover element (wrap, outer and image inner elements)
+  cover: {
+    wrap: document.querySelector(".cover-wrap"),
+    outer: document.querySelector(".cover"),
+    inner: document.querySelector(".cover__inner"),
+  },
+  // Some of the main page content elements
+  // We'll animate some of the content elements when expanding the menu
+  content: {
+    imgs: [...document.querySelectorAll(".content > .content__img")],
+    titles: [...document.querySelectorAll(".content > .content__title")],
+  },
+  menu: document.querySelector(".menu"),
+
+  menuContent: document.querySelector(".menu__content"),
+
+  closeCtrl: document.querySelector(".menu__back"),
+
+  extra: document.querySelectorAll(".menu__tagline, .menu__social-author"),
+};
